@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-24T18:15:49 CET" name="Surefire suite" finished-at="2025-10-24T18:15:51 CET" duration-ms="2459">
+  <suite started-at="2025-10-24T18:22:08 CET" name="Default suite" finished-at="2025-10-24T18:22:10 CET" duration-ms="1774">
     <groups>
     </groups>
-    <test started-at="2025-10-24T18:15:49 CET" name="Surefire test" finished-at="2025-10-24T18:15:51 CET" duration-ms="2459">
+    <test started-at="2025-10-24T18:22:08 CET" name="Default test" finished-at="2025-10-24T18:22:10 CET" duration-ms="1774">
       <class name="com.jinene.api.IpstakApiTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.jinene.api.IpstakApiTest@731f8236]" started-at="2025-10-24T18:15:49 CET" name="setup" finished-at="2025-10-24T18:15:49 CET" duration-ms="150" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.jinene.api.IpstakApiTest@48ae9b55]" started-at="2025-10-24T18:22:08 CET" name="setup" finished-at="2025-10-24T18:22:08 CET" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testIpGeolocation()[pri:0, instance:com.jinene.api.IpstakApiTest@731f8236]" started-at="2025-10-24T18:15:49 CET" name="testIpGeolocation" finished-at="2025-10-24T18:15:50 CET" duration-ms="1343" status="PASS">
+        <test-method signature="testIpGeolocation()[pri:0, instance:com.jinene.api.IpstakApiTest@48ae9b55]" started-at="2025-10-24T18:22:08 CET" name="testIpGeolocation" finished-at="2025-10-24T18:22:09 CET" duration-ms="982" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIpGeolocation -->
-        <test-method signature="testIpGeolocation_InvalidAccessKey()[pri:0, instance:com.jinene.api.IpstakApiTest@731f8236]" started-at="2025-10-24T18:15:50 CET" name="testIpGeolocation_InvalidAccessKey" finished-at="2025-10-24T18:15:51 CET" duration-ms="303" status="PASS">
+        <test-method signature="testIpGeolocation_InvalidAccessKey()[pri:0, instance:com.jinene.api.IpstakApiTest@48ae9b55]" started-at="2025-10-24T18:22:09 CET" name="testIpGeolocation_InvalidAccessKey" finished-at="2025-10-24T18:22:09 CET" duration-ms="291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIpGeolocation_InvalidAccessKey -->
-        <test-method signature="testIpGeolocation_InvalidIpAddress()[pri:0, instance:com.jinene.api.IpstakApiTest@731f8236]" started-at="2025-10-24T18:15:51 CET" name="testIpGeolocation_InvalidIpAddress" finished-at="2025-10-24T18:15:51 CET" duration-ms="645" status="FAIL">
+        <test-method signature="testIpGeolocation_InvalidIpAddress()[pri:0, instance:com.jinene.api.IpstakApiTest@48ae9b55]" started-at="2025-10-24T18:22:09 CET" name="testIpGeolocation_InvalidIpAddress" finished-at="2025-10-24T18:22:10 CET" duration-ms="309" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Le code HTTP doit être 200 même pour une IP invalide expected [200] but found [400]]]>
+              <![CDATA[Le code HTTP doit être 200 même pour une IP invalide expected [200] but found [429]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Le code HTTP doit être 200 même pour une IP invalide expected [200] but found [400]
+              <![CDATA[java.lang.AssertionError: Le code HTTP doit être 200 même pour une IP invalide expected [200] but found [429]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -58,14 +58,9 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 at org.testng.TestNG.runSuites(TestNG.java:1112)
 at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
@@ -73,6 +68,6 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           </reporter-output>
         </test-method> <!-- testIpGeolocation_InvalidIpAddress -->
       </class> <!-- com.jinene.api.IpstakApiTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
