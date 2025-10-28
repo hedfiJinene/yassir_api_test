@@ -5,6 +5,7 @@
     <classes>
       <class name="com.jinene.api.IpstakApiTest">
         <methods>
+          <include name="testIpGeolocation"/>
           <include name="setup"/>
           <include name="testIpGeolocation_InvalidIpAddress"/>
         </methods>
