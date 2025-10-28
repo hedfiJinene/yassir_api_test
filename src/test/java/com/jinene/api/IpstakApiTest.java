@@ -14,8 +14,9 @@ public class IpstakApiTest {
 
     @Test
     public void testIpGeolocation() {
-        String accessKey = "29e3eb616a16193e8777df6f80f84cc2";
-        String ip = "134.201.250.155";
+        
+    	String accessKey = System.getenv("IPSTACK_KEY");
+         String ip = "134.201.250.155";
 
         Response response = RestAssured
                 .given()
