@@ -15,7 +15,7 @@ public class IpstakApiTest {
     @Test
     public void testIpGeolocation() {
         
-    	String accessKey = System.getenv("IPSTACK_KEY");
+    	String accessKey = "29e3eb616a16193e8777df6f80f84cc2";
          String ip = "134.201.250.155";
 
         Response response = RestAssured
@@ -31,14 +31,15 @@ public class IpstakApiTest {
         Assert.assertEquals(response.statusCode(), 200);
         Assert.assertEquals(response.jsonPath().getString("ip"), ip);
         Assert.assertNotNull(response.jsonPath().getString("country_name"));
-    } @Test
-    public void testIpGeolocation_InvalidAccessKey() {
-        String invalidKey = "INVALID_KEY";
+    } 
+  @Test
+  public void testIpGeolocation1() {
+     String accessKey = "INVALID_KEY";
         String ip = "134.201.250.155";
 
         Response response = RestAssured
                 .given()
-                .queryParam("access_key", invalidKey)
+                .queryParam("access_key", "invalidKey")
                 .when()
                 .get("/" + ip)
                 .then()
@@ -50,6 +51,7 @@ public class IpstakApiTest {
         Assert.assertEquals(response.statusCode(), 200, "Même avec une clé invalide, le code est souvent 200");
         Assert.assertTrue(response.asString().contains("error"), "La réponse doit contenir un message d’erreur");
     }
+
     @Test
     public void testIpGeolocation_InvalidIpAddress() {
     	String accessKey = "29e3eb616a16193e8777df6f80f84cc2";
@@ -70,4 +72,8 @@ public class IpstakApiTest {
         Assert.assertTrue(response.asString().contains("error") || response.jsonPath().getString("ip") == null,
                 "La réponse doit contenir une erreur ou une IP nulle");
     }
-}
+    
+    }
+
+
+    
