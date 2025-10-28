@@ -67,8 +67,9 @@ public class IpstakApiTest {
 
         System.out.println("=== Réponse IP invalide ===");
         System.out.println(response.asPrettyString());
+        Assert.assertEquals(response.getStatusCode(), 400, "Le code HTTP doit être 400 pour une IP invalide");
 
-        Assert.assertEquals(response.statusCode(), 200, "Le code HTTP doit être 200 même pour une IP invalide");
+        
         Assert.assertTrue(response.asString().contains("error") || response.jsonPath().getString("ip") == null,
                 "La réponse doit contenir une erreur ou une IP nulle");
     }
